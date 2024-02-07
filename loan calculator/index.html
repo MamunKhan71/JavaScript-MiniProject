@@ -12,6 +12,7 @@
     <!-- link to daisy and tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./loanscript.js"></script>
     <!-- custom styles -->
     <style>
         .font-rubik {
@@ -20,63 +21,48 @@
     </style>
 </head>
 
-<body>
+<body class="bg-blue-400">
     <header>
     </header>
-    <main class="font-rubik h-full lg:h-auto py-14 lg:py-28">
-        <div class="flex items-center justify-center h-full">
-            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-6 lg:p-16">
-                <figure>
-                    <img src="./bmi.jpg" alt="Shoes" class="rounded-xl" />
-                </figure>
+    <main class="font-rubik h-full lg:h-screen py-14 lg:py-28">
+        <div class="flex items-center justify-center h-full p-4 lg:p-0">
+            <div class="card w-full lg:w-[700px] bg-base-100 shadow-xl p-6 lg:p-16">
                 <div class="card-body items-center text-center p-0">
-                    <h2 class="text-xl lg:text-4xl font-semibold">Body Mass Index Calculator</h2>
-                    <p class="text-sm lg:text-base text-gray-400">Use this calculator to calculate your BMI!</p>
+                    <h2 class="text-xl lg:text-4xl font-semibold">Loan Calculator</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Use this calculator to calculate your Loan!</p>
                     <hr class="w-full border-dashed">
-                    <label class="form-control w-full">
-                        <div class="label">
-                            <span class="text-base lg:text-xl">Gender :</span>
-                        </div>
-                        <select class="border py-3.5 rounded-lg input-bordered w-full px-4" name="gender-select"
-                            id="gender-select">
-                            <option selected value="default" disabled>Select Your Choice</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </label>
                     <label class="form-control w-full ">
                         <div class="label">
-                            <span class="text-base lg:text-xl">Age :</span>
+                            <span class="text-base lg:text-xl">Loan Amount :</span>
                         </div>
-                        <input type="number" id="age" placeholder="Type your age here"
+                        <input type="number" id="loanAmt" placeholder="Type your loan amount"
                             class="input input-bordered w-full" />
                     </label>
                     <label class="form-control w-full ">
                         <div class="label">
-                            <span class="text-base lg:text-xl">Height :</span>
+                            <span class="text-base lg:text-xl">Interest Rate (%) :</span>
                         </div>
                         <div class="height-group flex flex-col gap-4">
-                            <input type="number" id="heightft" placeholder="Feet" class="input input-bordered w-full" />
-                            <input type="number" id="heightin" placeholder="Inches"
+                            <input type="number" id="interest" placeholder="Loan interest rate"
                                 class="input input-bordered w-full" />
                         </div>
                     </label>
                     <label class="form-control w-full ">
                         <div class="label">
-                            <span class="text-base lg:text-xl">Weight :</span>
+                            <span class="text-base lg:text-xl">Loan Tem (In Months):</span>
                         </div>
-                        <input type="number" id="weight" placeholder="Weight in Kilogram"
+                        <input type="number" id="duration" placeholder="Loan duration in months"
                             class="input input-bordered w-full" />
                     </label>
                     <div class="card-actions my-4 w-full">
                         <button
-                            class="btn btn-primary bg-red-600 border-none text-2xl lg:text-3xl text-white hover:bg-pink-600 w-full"
-                            onclick="calculateBMI()">Calculate</button>
+                            class="btn btn-primary bg-green-600 border-none text-2xl lg:text-3xl text-white hover:bg-blue-600 w-full"
+                            onclick="loanCalculator()">Calculate</button>
                     </div>
                     <div class="w-full">
                         <hr>
-                        <h1 class="text-base lg:text-3xl my-4 text-pink-800" id="result">Result : </h1>
-                        <p class="hidden text-sm lg:text-base text-gray-400 pb-4" id="comment"></p>
+                        <h1 class="text-base lg:text-3xl my-4 text-pink-800" id="result">Total Interest : </h1>
+                        <p class="hidden text-sm lg:text-base text-gray-400 pb-4" id="monthly_payment"></p>
                         <hr>
                     </div>
                 </div>
