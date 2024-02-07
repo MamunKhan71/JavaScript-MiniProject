@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator || Calculate Your Love!</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+    <script src="bmi_script.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-blue-600 to-blue-800 p-10 lg:p-0">
+    <header class="font-rubik h-full lg:h-auto py-14 lg:py-28">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-6 lg:p-16">
+                <figure>
+                    <img src="./bmi.jpg" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                <div class="card-body items-center text-center p-0">
+                    <h2 class="text-xl lg:text-4xl font-semibold">Body Mass Index Calculator</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Use this calculator to calculate your BMI!</p>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Gender :</span>
+                        </div>
+                        <select class="border py-3.5 rounded-lg input-bordered w-full px-4" name="gender-select"
+                            id="gender-select">
+                            <option selected value="default" disabled>Select Your Choice</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Age :</span>
+                        </div>
+                        <input type="number" id="age" placeholder="Type your age here"
+                            class="input input-bordered w-full" />
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Height :</span>
+                        </div>
+                        <div class="height-group flex flex-col gap-4">
+                            <input type="number" id="heightft" placeholder="Feet"
+                                class="input input-bordered w-full" />
+                            <input type="number" id="heightin" placeholder="Inches"
+                                class="input input-bordered w-full" />
+                        </div>
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Weight :</span>
+                        </div>
+                        <input type="number" id="weight" placeholder="Weight in Kilogram"
+                            class="input input-bordered w-full" />
+                    </label>
+                    <div class="card-actions my-4 w-full">
+                        <button
+                            class="btn btn-primary bg-red-600 border-none text-2xl lg:text-3xl text-white hover:bg-pink-600 w-full"
+                            onclick="calculateBMI()">Calculate</button>
+                    </div>
+                    <div class="w-full">
+                        <hr>
+                        <h1 class="text-base lg:text-3xl my-4 text-pink-800" id="result">Result : </h1>
+                        <p class="hidden text-sm lg:text-base text-gray-400 pb-4" id="comment"></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
