@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Application</title>
+    <!-- font api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./counter.js"></script>
+    <!-- custom styles -->
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="bg-amber-600 font-rubik">
+        <div class="flex items-center justify-center h-full lg:h-screen p-4 lg:p-0">
+            <div class="card w-full lg:w-[700px] bg-base-100 shadow-xl p-6 lg:p-16">
+                <div class="card-body items-center text-center p-0">
+                    <h2 class="text-xl lg:text-4xl font-semibold">Counter Application</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Count your things!</p>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full ">
+                        <h1 class="text-6xl font-semibold" id="counter">0</h1>
+                    </label>
+                    <div class="card-actions my-4">
+                        <div class="flex flex-col lg:flex-row gap-4 lg:gap-8">
+                            <button
+                                class="rounded-3xl btn btn-primary bg-blue-600 border-none text-2xl lg:text-4xl text-white hover:bg-red-600 px-12"
+                                onclick="increment()">+
+                            </button>
+                            <button
+                                class="rounded-3xl btn btn-primary bg-red-600 border-none text-2xl lg:text-4xl text-white hover:bg-blue-600 px-12"
+                                onclick="decrement()">-
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="w-full">
+                        <button
+                            class="rounded-3xl btn btn-primary bg-red-600 border-none text-2xl lg:text-4xl text-white hover:bg-blue-600 px-12 w-1/2"
+                            onclick="reset()">Reset
+                        </button>
+                    </div>
+
+                    <div class="w-full">
+                        <hr class="my-4">
+                        <p class="mt-4 text-gray-400">Developed by &copy;<a href="https://fb.com/mkmamun111"
+                                target="_blank">Md. Mamun</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
