@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./palindrome.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="font-rubik bg-slate-500">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full lg:h-screen">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl lg:px-16">
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl lg:text-4xl font-semibold">Palindrome Checker</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Use this checker to find the palindrome number!</p>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Enter Your Word: </span>
+                        </div>
+                        <input type="text" id="palInput" placeholder="Enter Your Word Here"
+                            class="input input-bordered w-full" />
+                    </label>
+                    <div class="card-actions my-4 w-full">
+                        <button
+                            class="btn btn-primary bg-slate-500 border-none text-2xl lg:text-3xl text-white hover:bg-slate-800 w-full"
+                            onclick="palindromeChecker()">Check Palindrome</button>
+                    </div>
+                    <div class="w-full">
+                        <hr>
+                        <h1 class="text-base lg:text-3xl my-4 text-pink-800" id="result">Result : </h1>
+                        <hr>
+                        <p class="mt-4 text-gray-400">Developed by &copy;<a href="https://fb.com/mkmamun111"
+                                target="_blank"> Md. Mamun</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
