@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const bodyBg = document.getElementById('bodyBg');
     const redSlider = document.getElementById('redSlider');
     const greenSlider = document.getElementById('greenSlider');
     const blueSlider = document.getElementById('blueSlider');
@@ -25,8 +26,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         colorPreview.classList.add(rgb);
         rgbInfo.innerHTML = `rgb(${red},${green},${blue})`;
+        updateBg();
     }
 
+    function updateBg() {
+        let rgbFrom = `from-[rgb(${red},${green},${blue})]`;
+        let rgbTo = `to-[rgb(${red - 100},${green - 100},${blue - 100})]`;
+        bodyBg.classList.forEach(className => {
+            if (className.startsWith('from-') || className.startsWith('to-')) {
+                bodyBg.classList.remove(className);
+            }
+        });
+        bodyBg.classList.add(rgbFrom);
+        bodyBg.classList.add(rgbTo);
+    }
     function updateRedColor() {
         const redValues = redSlider.value;
         red = redValues;
