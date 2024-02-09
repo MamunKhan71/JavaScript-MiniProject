@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tip.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body id="bodyBg" class="bg-gradient-to-b from-green-600 to-black px-4 lg:px-0">
+    <header class="font-rubik h-full lg:h-screen py-4 lg:py-28">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl lg:px-16">
+                <div class="card-body items-center text-center">
+                    <h2 class="text-xl lg:text-4xl font-semibold">Tip Calculator</h2>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Bill Amount : </span>
+                        </div>
+                        <input type="number" id="billAmt" placeholder="Enter your bill amount"
+                            class="input input-bordered w-full" />
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Service Rating : </span>
+                        </div>
+                        <select class="w-full border border-slate-300 p-4 rounded-lg" name="Rating" id="rating">
+                            <option disabled value="poor" selected>Select your choice</option>
+                            <option value="1">Poor</option>
+                            <option value="2">Average</option>
+                            <option value="3">Good</option>
+                            <option value="4">Excellent</option>
+                        </select>
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Number of People : </span>
+                        </div>
+                        <input type="number" id="noOfPeople" placeholder="Total number of people"
+                            class="input input-bordered w-full" />
+                    </label>
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Meal Type : </span>
+                        </div>
+                        <select class="w-full border border-slate-300 p-4 rounded-lg" name="mealType" id="mealType">
+                            <option disabled value="0" selected>Select your choice</option>
+                            <option value="1">Breakfast</option>
+                            <option value="2">Lunch</option>
+                            <option value="3">Dinner</option>
+                        </select>
+                    </label>
+                    <div class="card-actions my-4 w-full">
+                        <button
+                            class="btn btn-primary bg-green-600 border-none text-2xl lg:text-3xl text-white hover:bg-blue-600 w-full"
+                            onclick="tipCalculator()">Calculate Tip</button>
+                        <div class="w-full mt-4 hidden" id="tipArea">
+                            <hr class="w-full">
+                            <h1 class="text-xl lg:text-2xl py-4 ">Total Bill</h1>
+                            <h1 id="tipAmt" class=" text-xl lg:text-2xl font-bold w-full py-4 rounded-xl bg-slate-200">0 Tk</h1>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-400">Developed by &copy;<a href="https://fb.com/mkmamun111"
+                            target="_blank">Md. Mamun</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
