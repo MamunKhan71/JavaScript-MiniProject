@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator || Calculate Your Love!</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./rgb.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-red-800 to-pink-800 p-10 lg:p-0">
+    <header class="font-rubik h-full lg:h-screen py-14 lg:py-28">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl lg:px-16">
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl lg:text-4xl font-semibold">RGB Color Generator</h2>
+                    <hr class="w-full border-dashed">
+                    <div class="w-full h-80 bg-slate-200 rounded-2xl my-4 p-4">
+                        <div class="bg-white h-full rounded-2xl">
+                        </div>
+                    </div>
+                    <label class="form-control w-full">
+                        <div>
+                            <div class="label">
+                                <span class="text-base lg:text-xl">Red:</span>
+                            </div>
+                            <div class="flex w-full items-center gap-4">
+                                <input id="redSlider" type="range" min="0" max="255" value="0"
+                                    class="range range-error range-sm " />
+                                <div class="bg-red-500 px-8 rounded-xl text-white">
+                                    <h1 id="redValue">0</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="form-control w-full">
+                        <div>
+                            <div class="label">
+                                <span class="text-base lg:text-xl">Green:</span>
+                            </div>
+                            <div class="flex w-full items-center gap-4">
+                                <input id="greenSlider" type="range" min="0" max="255" value="0"
+                                    class="range range-success range-sm " />
+                                <div class="bg-green-600 px-8 rounded-xl text-white">
+                                    <h1 id="greenValue">0</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="form-control w-full">
+                        <div>
+                            <div class="label">
+                                <span class="text-base lg:text-xl">Blue:</span>
+                            </div>
+                            <div class="flex w-full items-center gap-4">
+                                <input id="blueSlider" type="range" min="0" max="255" value="0"
+                                    class="range range-info range-sm " />
+                                <div class="bg-blue-400 px-8 rounded-xl text-white">
+                                    <h1 id="blueValue">0</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <div class="card-actions my-4">
+                        <div class="flex flex-col lg:flex-row gap-4 lg:gap-8">
+                            <button
+                                class="rounded-3xl btn btn-primary bg-blue-600 border-none text-xl lg:text-2xl text-white hover:bg-red-600 w-72 h-20"
+                                onclick="increment()">Copy RGB Value
+                            </button>
+                            <button disabled id="rgbInfo"
+                                class="rounded-3xl btn btn-primary bg-red-600 border-none text-xl lg:text-2xl text-white hover:bg-blue-600 w-72 h-20"
+                                onclick="decrement()">rgb( 0, 0, 0 )
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="w-full">
+                        <p class="mt-4 text-gray-400">Developed by &copy;<a href="https://fb.com/mkmamun111"
+                                target="_blank">Md. Mamun</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
