@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator || Calculate Your Love!</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+    <script src="unicode.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-600 to-pink-800 p-10 lg:p-0">
+    <header class="font-rubik h-full lg:h-screen py-14 lg:py-28">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-6 lg:p-16">
+                <div class="card-body items-center text-center p-0">
+                    <h2 class="text-xl lg:text-4xl font-semibold">Unicode Character</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Use this converter to convert default text to unicode
+                        character!</p>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Enter a character :</span>
+                        </div>
+                        <input type="text" id="characterInput" placeholder="Enter a character here.."
+                            class="input input-bordered w-full" />
+                    </label>
+                    <div class="card-actions my-4 w-full">
+                        <button
+                            class="btn btn-primary bg-red-600 border-none text-2xl lg:text-3xl text-white hover:bg-pink-600 w-full"
+                            onclick="getUnicodeCharacter()">Detect</button>
+                    </div>
+                    <div class="w-full" id="lastPart">
+                        <hr>
+                        <h1 class="text-base lg:text-2xl my-4 text-pink-800" id="result"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
