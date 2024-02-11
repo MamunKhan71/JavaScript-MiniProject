@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - Calculate Your Age!</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- link to daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./age.js"></script>
+    <style>
+        .font-rubik {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-600 to-pink-800 p-4 lg:p-0">
+    <header class="font-rubik h-full lg:h-screen py-0 lg:py-28">
+        <!-- card section starts here -->
+        <div class="flex items-center justify-center h-full">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-4 lg:p-16">
+                <div class="card-body items-center text-center p-0">
+                    <h2 class="text-xl lg:text-4xl font-semibold">Age Calculator</h2>
+                    <p class="text-sm lg:text-base text-gray-400">Use this calculator to calculate your age</p>
+                    <hr class="w-full border-dashed">
+                    <label class="form-control w-full ">
+                        <div class="label">
+                            <span class="text-base lg:text-xl">Enter your birth date :</span>
+                        </div>
+                        <input type="date" id="date" class="input input-bordered w-full" />
+                    </label>
+                    <div class="card-actions my-4 w-full">
+                        <button
+                            class="btn btn-primary bg-red-600 border-none text-xl lg:text-3xl text-white hover:bg-pink-600 w-full"
+                            onclick="calculateAge()">Calculate Age</button>
+                    </div>
+                    <div class="w-full" id="lastPart">
+                        <hr>
+                        <h1 class="text-base lg:text-2xl my-4 text-pink-800" id="result"></h1>
+                    </div>
+                    <div class="bg-slate-200 h-auto w-full rounded-xl p-4 hidden my-4" id="subfield">
+                        <h1 class="font-bold">Months Passed</h1>
+                        <p id="month"></p>
+                        <hr>
+                        <h1 class="font-bold">Weeks Passed</h1>
+                        <p id="weeks"></p>
+                        <hr>
+                        <h1 class="font-bold">Days Passed</h1>
+                        <p id="days"></p>
+                        <hr>
+                        <h1 class="font-bold">Minutes Passed</h1>
+                        <p id="minutes"></p>
+                        <hr>
+                        <h1 class="font-bold">Seconds Passed</h1>
+                        <p id="seconds"></p>
+                        <hr>
+                        <h1 class="font-bold">Milliseconds Passed</h1>
+                        <p id="milliseconds"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
