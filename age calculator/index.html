@@ -22,9 +22,9 @@
 </head>
 
 <body class="bg-gradient-to-b from-purple-600 to-pink-800 p-4 lg:p-0">
-    <header class="font-rubik h-full lg:h-screen py-0 lg:py-28">
+    <header class="font-rubik h-full md:h-screen lg:h-screen py-0 lg:py-28">
         <!-- card section starts here -->
-        <div class="flex items-center justify-center h-full">
+        <div class="flex items-center justify-center h-full p-0 lg:p-8">
             <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-4 lg:p-16">
                 <div class="card-body items-center text-center p-0">
                     <h2 class="text-xl lg:text-4xl font-semibold">Age Calculator</h2>
@@ -44,6 +44,7 @@
                     <div class="w-full" id="lastPart">
                         <hr>
                         <h1 class="text-base lg:text-2xl my-4 text-pink-800" id="result"></h1>
+                        <h1 class="text-base lg:text-xl my-4 text-pink-800" id="subText"></h1>
                     </div>
                     <div class="bg-slate-200 h-auto w-full rounded-xl p-4 hidden my-4" id="subfield">
                         <h1 class="font-bold">Months Passed</h1>
@@ -55,6 +56,9 @@
                         <h1 class="font-bold">Days Passed</h1>
                         <p id="days"></p>
                         <hr>
+                        <h1 class="font-bold">Hours Passed</h1>
+                        <p id="hours"></p>
+                        <hr>
                         <h1 class="font-bold">Minutes Passed</h1>
                         <p id="minutes"></p>
                         <hr>
@@ -65,8 +69,11 @@
                         <p id="milliseconds"></p>
                     </div>
                 </div>
+                <p class="mt-4 text-gray-400 text-center text-sm lg:text-base">Developed with &hearts; by &copy; <a href="https://fb.com/mkmamun111" target="_blank"><strong>Md.
+                    Mamun</strong></a></p>
             </div>
         </div>
+
     </header>
     <main>
 
