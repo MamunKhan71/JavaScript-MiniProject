@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Calculator || Calculate Your Love!</title>
+    <title>BMI Calculator - Calculate Your BMI!</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +22,13 @@
     </style>
 </head>
 
-<body class="bg-gradient-to-b from-blue-600 to-blue-800 p-10 lg:p-0">
-    <header class="font-rubik h-full lg:h-auto py-14 lg:py-28">
+<body class="bg-gradient-to-b from-blue-600 to-blue-800 p-4 lg:p-0">
+    <header class="font-rubik h-full lg:h-auto py-0 lg:py-14">
         <!-- card section starts here -->
         <div class="flex items-center justify-center h-full">
-            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-6 lg:p-16">
+            <div class="card w-full lg:w-1/2 bg-base-100 shadow-xl p-4 lg:p-16">
                 <figure>
-                    <img src="./bmi.jpg" alt="Shoes" class="rounded-xl" />
+                    <img  src="./bmi.jpg" alt="Shoes" class="rounded-xl" />
                   </figure>
                 <div class="card-body items-center text-center p-0">
                     <h2 class="text-xl lg:text-4xl font-semibold">Body Mass Index Calculator</h2>
@@ -70,7 +70,7 @@
                         <input type="number" id="weight" placeholder="Weight in Kilogram"
                             class="input input-bordered w-full" />
                     </label>
-                    <div class="card-actions my-4 w-full">
+                    <div class="card-actions my-3 w-full">
                         <button
                             class="btn btn-primary bg-red-600 border-none text-2xl lg:text-3xl text-white hover:bg-pink-600 w-full"
                             onclick="calculateBMI()">Calculate</button>
@@ -80,6 +80,8 @@
                         <h1 class="text-base lg:text-3xl my-4 text-pink-800" id="result">Result : </h1>
                         <p class="hidden text-sm lg:text-base text-gray-400 pb-4" id="comment"></p>
                         <hr>
+                        <p class="mt-4 text-gray-400 text-center text-sm lg:text-base">Developed with &hearts; by &copy; <a href="https://fb.com/mkmamun111" target="_blank"><strong>Md.
+                            Mamun</strong></a></p>
                     </div>
                 </div>
             </div>
