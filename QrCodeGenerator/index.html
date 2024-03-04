@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+
+    <!-- <script type="module" src="./bangladesh.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- qr code -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+      .font-hindBn {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+      .font-hind {
+        font-family: "Hind", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="w-full h-screen font-hindBn">
+    <header></header>
+    <main class="flex items-center justify-center h-screen bg-amber-300">
+      <div class="card w-96 bg-base-100 shadow-xl">
+        <div
+          class="w-full flex items-center justify-center rounded-t-2xl"
+        >
+          <div id="placeHolder" class="h-full w-full rounded-t-2xl">
+            
+          </div>
+          <div
+            class="hidden h-full w-full flex justify-center items-center"
+          >
+          <canvas id="qrcode"></canvas>
+        </div>
+        </div>
+        <div class="card-body items-center text-center space-y-2">
+          <h2 class="card-title">আপনার URL দিন</h2>
+          <div class="w-full">
+            <label class="input input-bordered flex items-center gap-2">
+              <img
+                width="20"
+                height="20"
+                src="https://img.icons8.com/ios-filled/50/link--v1.png"
+                alt="link--v1"
+              />
+              <input
+                type="url"
+                id="linkUrl"
+                class="grow font-hind placeholder:font-hindBn"
+                placeholder="এখানে URL দিন"
+              />
+            </label>
+          </div>
+          <div class="card-actions w-full">
+            <button
+              id="btnContainer"
+              onclick="getDetails()"
+              class="btn bg-amber-500 text-white w-full"
+            >
+              জেনারেট করুন
+            </button>
+            <button
+              onclick="download()"
+              class="btn bg-amber-500 text-white w-full"
+            >
+              ডাউনলোড করুন
+            </button>
+            <h1 class="text-center text-gray-400 font-medium w-full">Developed with &hearts; by &copy; <a href="https://www.fb.com/mkmamun111">Md. Mamun</a></h1>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      
+    </footer>
+    <script>
+      function getDetails() {
+        let url = document.getElementById("linkUrl");
+        let holder = document.getElementById("placeHolder");
+        let qrCodeText = document.getElementById("qrcode");
+        qrCodeText.innerHTML = "";
+        const newQr = new QRious({
+          element: qrCodeText,
+          value: url.value,
+          size: 600,
+          padding: 50,
+        });
+        url.value = "";
+        const newElement = document.createElement('img');
+        const hrTag = document.createElement('hr');
+        hrTag.classList.add('border', 'border-dashed', 'border-gray-400')
+        newElement.classList.add('w-full', 'h-full', 'rounded-t-2xl','shadow-lg')
+        newElement.src = newQr.toDataURL();
+        holder.appendChild(newElement);
+        holder.appendChild(hrTag);
+      }
+      function download() {
+        let link = document.createElement("a");
+        link.download = "download.png";
+        link.href = document.getElementById("qrcode").toDataURL();
+        link.click();
+      }
+    </script>
+
+  </body>
+</html>
