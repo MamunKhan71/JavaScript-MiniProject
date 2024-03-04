@@ -19,6 +19,7 @@ function getDetails() {
     newElement.src = newQr.toDataURL();
     holder.appendChild(newElement);
     holder.appendChild(hrTag);
+    document.getElementById('downloadBtn').classList.remove('hidden')
 }
 function download() {
     let link = document.createElement("a");
