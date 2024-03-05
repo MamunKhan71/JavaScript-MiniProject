@@ -18,6 +18,16 @@ window.addEventListener('keydown', (e) => {
     keyCode.value = (e.key).charCodeAt(0);
 });
 
+async function copy() {
+    const copy = document.getElementById('copyButton');
+    const copyHtml = copy.innerHTML;
+    console.log(copyHtml)
+    copy.innerHTML = "Copied"
+    setTimeout(() => {
+        copy.innerHTML = copyHtml;
+    }, 2000)
+}
+
 const duplicateValue = (keyIdEvent, dupliId) => {
     keyIdEvent.classList.add('bg-amber-400');
     document.getElementById(`${dupliId}2`).classList.add('bg-amber-400')
@@ -48,5 +58,5 @@ const copyCode = () => {
     const code = document.getElementById('keyCode').value;
     console.log(code);
     navigator.clipboard.writeText(code);
-    alert("Copied to clipboard!")
+    copy(this);
 }

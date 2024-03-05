@@ -22,7 +22,7 @@
     <header>
 
     </header>
-    <main class="container mx-auto h-full w-full montserrat font-semibold" id="main">
+    <main class="container mx-auto h-full w-full montserrat font-semibold text-lg" id="main">
         <div class="flex items-center justify-center w-full h-full">
             <div class="card w-auto bg-base-100 shadow-xl p-8">
                 <h2 class="card-title text-2xl font-black flex justify-center my-2">KEY CODE GENERATOR</h2>
@@ -128,7 +128,7 @@
                     <h2 class="card-title">KEY CODE</h2>
                     <input id="keyCode" type="text" disabled placeholder="Type here"
                         class="disabled:bg-white border-2 border-dashed text-3xl text-center font-bold  text-black input input-bordered w-full" />
-                    <button class="btn w-full flex gap-2 items-center" title="Copy Code" onclick="copyCode()">Copy
+                    <button id="copyButton" class="btn w-full flex gap-2 items-center" title="Copy Code" onclick="copyCode()">Copy
                         <span><img width="18" height="18"
                                 src="https://img.icons8.com/material-outlined/24/documents--v2.png"
                                 alt="documents--v2" /></span> </button>
