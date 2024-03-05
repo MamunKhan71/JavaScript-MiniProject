@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Codes</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .montserrat {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+
+<body  class="bg-gradient-to-b from-cyan-500 to-blue-500 h-dvh w-full">
+    <header>
+
+    </header>
+    <main class="container mx-auto h-full w-full montserrat" id="main">
+        <div class="flex items-center justify-center w-full h-full">
+            <div class="card w-auto bg-base-100 shadow-xl p-8">
+                <h2 class="card-title text-2xl font-black flex justify-center my-2">KEY CODE GENERATOR</h2>
+                <div class="py-8 border-2 border-dashed rounded-2xl px-4">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="esc" class="kbd w-full">esc</kbd>
+                        <kbd id="f1" class="kbd">f1</kbd>
+                        <kbd id="f2" class="kbd">f2</kbd>
+                        <kbd id="f3" class="kbd">f3</kbd>
+                        <kbd id="f4" class="kbd">f4</kbd>
+                        <kbd id="f5" class="kbd">f5</kbd>
+                        <kbd id="f6" class="kbd">f6</kbd>
+                        <kbd id="f7" class="kbd">f7</kbd>
+                        <kbd id="f8" class="kbd">f8</kbd>
+                        <kbd id="f9" class="kbd">f9</kbd>
+                        <kbd id="f10" class="kbd">f10</kbd>
+                        <kbd id="f11" class="kbd">f11</kbd>
+                        <kbd id="f12" class="kbd w-full">f12</kbd>
+                      </div> 
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="tab" class="kbd">tab</kbd>
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                        <kbd id="[" class="kbd">[</kbd>
+                        <kbd id="]" class="kbd">]</kbd>
+                        <kbd id="penter" class="kbd">enter</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="caps" class="kbd w-full">caps</kbd>
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                        <kbd id=";" class="kbd">;</kbd>
+                        <kbd id="'" class="kbd">'</kbd>
+                        <kbd id="\" class="kbd">\</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="shiftLeft" class="kbd w-full">shift</kbd>
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                        <kbd id="shiftRight" class="kbd w-full">shift</kbd>
+                      </div>
+                      <div class="flex justify-center gap-1 my-1 w-full ">
+                        <kbd id="ctrl1" class="kbd w-1/2 ">ctrl</kbd>
+                        <kbd id="metaLeft" class="kbd"><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/windows-10.png" alt="windows-10"/></kbd>
+                        <kbd id="alt" class="kbd">alt</kbd>
+                        <kbd id="Space" class="kbd w-full">Space</kbd>
+                        <kbd id="alt" class="kbd">alt</kbd>
+                        <kbd id="metaRight" class="kbd"><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/windows-10.png" alt="windows-10"/></kbd>
+                        <kbd id="contextMenu" class="kbd"><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/document--v1.png" alt="document--v1"/></kbd>
+                        <kbd id="ctrl2" class="kbd w-1/2">ctrl</kbd>
+                      </div> 
+                </div>
+                
+                <div class="card-body items-center px-0">
+                    <hr class="border border-dashed w-full">
+                    <h2 class="card-title">KEY PRESSED</h2>
+                    <input disabled id="keyPressed" type="text" placeholder="Type here" class="disabled:bg-white border-2 border-dashed text-3xl text-center font-bold  input input-bordered w-full" />
+                    <h2 class="card-title">KEY CODE</h2>
+                    <input id="keyCode" type="text" disabled  placeholder="Type here" class="disabled:bg-white border-2 border-dashed text-3xl text-center font-bold  text-black input input-bordered w-full" />
+                    <button class="btn w-full flex gap-2 items-center" title="Copy Code" onclick="copyCode()">Copy <span><img width="18" height="18" src="https://img.icons8.com/material-outlined/24/documents--v2.png" alt="documents--v2"/></span> </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
