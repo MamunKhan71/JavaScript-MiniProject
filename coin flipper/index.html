@@ -19,18 +19,17 @@
 </head>
 
 <body class="bg-gradient-to-b from-violet-800 to-black h-dvh montserrat">
-    <div class="h-full w-full flex items-center justify-center">
-        <div class="card bg-base-100 shadow-xl">
-            <figure class="px-6 pt-6">
+    <div class="h-full w-full flex items-center justify-center px-4">
+        <div class="card bg-base-100 shadow-xl w-full lg:w-auto">
+            <figure class="px-4 lg:px-6 pt-4 lg:pt-6">
                 <div id="coinFlipper"
-                    class="rounded-xl bg-[url('coinStatic.png')] h-[300px] w-[400px] bg-cover">
-
+                    class="rounded-xl bg-[url('coinStatic.png')] h-[300px] w-full lg:w-[400px] bg-cover">
                 </div>
             </figure>
-            <div class="card-body items-center text-center w-full px-6">
+            <div class="card-body items-center text-center w-full lg:px-6">
                 <div class="w-full flex justify-between ">
-                    <button class="btn basis-44 text-xl font-bold">Heads : <span id="head">0</span></button>
-                    <button class="btn basis-44 text-xl font-bold">Tails : <span id="tail">0</span></button>
+                    <button class="btn lg:basis-44 text-xl font-bold">Heads : <span id="head">0</span></button>
+                    <button class="btn lg:basis-44 text-xl font-bold">Tails : <span id="tail">0</span></button>
                 </div>
                 <div class="card-actions w-full mt-4">
                     <button onclick="coinFlip()" class="btn w-full text-xl font-bold">Flip the coin</button>
