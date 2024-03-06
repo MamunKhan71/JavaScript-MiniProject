@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flipper!</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .montserrat {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-violet-800 to-black h-dvh montserrat">
+    <div class="h-full w-full flex items-center justify-center">
+        <div class="card bg-base-100 shadow-xl">
+            <figure class="px-6 pt-6">
+                <div id="coinFlipper"
+                    class="rounded-xl bg-[url('coinStatic.png')] h-[300px] w-[400px] bg-cover">
+
+                </div>
+            </figure>
+            <div class="card-body items-center text-center w-full px-6">
+                <div class="w-full flex justify-between ">
+                    <button class="btn basis-44 text-xl font-bold">Heads : <span id="head">0</span></button>
+                    <button class="btn basis-44 text-xl font-bold">Tails : <span id="tail">0</span></button>
+                </div>
+                <div class="card-actions w-full mt-4">
+                    <button onclick="coinFlip()" class="btn w-full text-xl font-bold">Flip the coin</button>
+                    <button onclick="scoreReset()" class="btn w-full text-xl font-bold">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
